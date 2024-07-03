@@ -22,8 +22,8 @@ private:
 
 private slots:
     void NumPress();
-    //void MathButtonPress();
-    //void EqualButton();
+    void MathButtonPress();
+    void EqualButton();
     //void ChangeNumberSign();
 
 };

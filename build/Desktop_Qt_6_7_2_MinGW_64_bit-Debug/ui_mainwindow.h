@@ -201,7 +201,10 @@ public:
         button_multiply = new QPushButton(centralwidget);
         button_multiply->setObjectName("button_multiply");
         button_multiply->setGeometry(QRect(450, 250, 120, 120));
-        button_multiply->setFont(font);
+        QFont font1;
+        font1.setPointSize(65);
+        font1.setBold(true);
+        button_multiply->setFont(font1);
         button_multiply->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "border: none;\n"
@@ -217,7 +220,7 @@ public:
         button_sum = new QPushButton(centralwidget);
         button_sum->setObjectName("button_sum");
         button_sum->setGeometry(QRect(450, 540, 120, 120));
-        button_sum->setFont(font);
+        button_sum->setFont(font1);
         button_sum->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "border: none;\n"
@@ -233,7 +236,8 @@ public:
         button_sub = new QPushButton(centralwidget);
         button_sub->setObjectName("button_sub");
         button_sub->setGeometry(QRect(450, 390, 120, 120));
-        button_sub->setFont(font);
+        button_sub->setFont(font1);
+        button_sub->setLayoutDirection(Qt::LeftToRight);
         button_sub->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "border: none;\n"
@@ -361,10 +365,10 @@ public:
         display = new QLineEdit(centralwidget);
         display->setObjectName("display");
         display->setGeometry(QRect(30, 20, 531, 61));
-        QFont font1;
-        font1.setPointSize(40);
-        font1.setBold(true);
-        display->setFont(font1);
+        QFont font2;
+        font2.setPointSize(40);
+        font2.setBold(true);
+        display->setFont(font2);
         display->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "{\n"
 "border: none;\n"
@@ -390,7 +394,7 @@ public:
         button_3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
         button_6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
         button_9->setText(QCoreApplication::translate("MainWindow", "9", nullptr));
-        button_multiply->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        button_multiply->setText(QCoreApplication::translate("MainWindow", "*", nullptr));
         button_sum->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         button_sub->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
         button_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));

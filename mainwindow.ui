@@ -325,7 +325,7 @@ padding: 0px;
     </property>
     <property name="font">
      <font>
-      <pointsize>45</pointsize>
+      <pointsize>65</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -344,7 +344,7 @@ padding: 0px;
 }</string>
     </property>
     <property name="text">
-     <string>X</string>
+     <string>*</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_sum">
@@ -358,7 +358,7 @@ padding: 0px;
     </property>
     <property name="font">
      <font>
-      <pointsize>45</pointsize>
+      <pointsize>65</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -391,9 +391,12 @@ padding: 0px;
     </property>
     <property name="font">
      <font>
-      <pointsize>45</pointsize>
+      <pointsize>65</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton

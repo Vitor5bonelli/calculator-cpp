@@ -24,7 +24,8 @@ private slots:
     void NumPress();
     void MathButtonPress();
     void EqualButton();
-    //void ChangeNumberSign();
+    void ResetCalculator();
+    void ChangeNumberSign();
 
 };
 #endif // MAINWINDOW_H

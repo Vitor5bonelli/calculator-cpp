@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <iostream>
 
 double calcVal = 0.0;
 bool divTrigger = false;
@@ -30,6 +29,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->button_divide, SIGNAL(released()), this, SLOT(MathButtonPress()));
 
     connect(ui->button_equals, SIGNAL(released()), this, SLOT(EqualButton()));
+
+    connect(ui->button_ac, SIGNAL(released()), this, SLOT(ResetCalculator()));
+
+    connect(ui->button_moreorless, SIGNAL(released()), this, SLOT(ChangeNumberSign()));
 }
 
 MainWindow::~MainWindow()
@@ -103,11 +106,25 @@ void MainWindow::EqualButton(){
 
 }
 
+void MainWindow::ResetCalculator(){
+    ui->display->setText("0");
+    calcVal = 0.0;
+    divTrigger = false;
+    multTrigger = false;
+    addTrigger = false;
+    subTrigger = false;
+}
 
+void MainWindow::ChangeNumberSign(){
+    QString displayVal = ui->display->text();
+    double dbDisplayVal = displayVal.toDouble();
 
+    if( (dbDisplayVal != 0.0) || (dbDisplayVal != 0)){
+        dbDisplayVal *= -1;
+    }
 
-
-
+    ui->display->setText(QString::number(dbDisplayVal));
+}
 
 
 

@@ -515,7 +515,7 @@ padding: 0px;
      <string>0</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_percent">
+   <widget class="QPushButton" name="button_square">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -545,7 +545,7 @@ padding: 0px;
 }</string>
     </property>
     <property name="text">
-     <string>%</string>
+     <string>x²</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_moreorless">

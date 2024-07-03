@@ -26,6 +26,7 @@ private slots:
     void EqualButton();
     void ResetCalculator();
     void ChangeNumberSign();
+    void ToSquare();
 
 };
 #endif // MAINWINDOW_H

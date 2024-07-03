@@ -37,7 +37,7 @@ public:
     QPushButton *button_dot;
     QPushButton *button_equals;
     QPushButton *button_0;
-    QPushButton *button_percent;
+    QPushButton *button_square;
     QPushButton *button_moreorless;
     QPushButton *button_divide;
     QPushButton *button_ac;
@@ -298,11 +298,11 @@ public:
 "max-height: 120px;\n"
 "padding: 0px;\n"
 "}"));
-        button_percent = new QPushButton(centralwidget);
-        button_percent->setObjectName("button_percent");
-        button_percent->setGeometry(QRect(310, 110, 120, 120));
-        button_percent->setFont(font);
-        button_percent->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        button_square = new QPushButton(centralwidget);
+        button_square->setObjectName("button_square");
+        button_square->setGeometry(QRect(310, 110, 120, 120));
+        button_square->setFont(font);
+        button_square->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "border: none;\n"
 "border-radius: 60px;\n"
@@ -400,7 +400,7 @@ public:
         button_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         button_equals->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         button_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        button_percent->setText(QCoreApplication::translate("MainWindow", "%", nullptr));
+        button_square->setText(QCoreApplication::translate("MainWindow", "x\302\262", nullptr));
         button_moreorless->setText(QCoreApplication::translate("MainWindow", "+/-", nullptr));
         button_divide->setText(QCoreApplication::translate("MainWindow", "/", nullptr));
         button_ac->setText(QCoreApplication::translate("MainWindow", "AC", nullptr));

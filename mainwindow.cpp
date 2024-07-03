@@ -33,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->button_ac, SIGNAL(released()), this, SLOT(ResetCalculator()));
 
     connect(ui->button_moreorless, SIGNAL(released()), this, SLOT(ChangeNumberSign()));
+
+    connect(ui->button_square, SIGNAL(released()), this, SLOT(ToSquare()));
+
 }
 
 MainWindow::~MainWindow()
@@ -125,6 +128,20 @@ void MainWindow::ChangeNumberSign(){
 
     ui->display->setText(QString::number(dbDisplayVal));
 }
+
+void MainWindow::ToSquare(){
+    double solution = 0.0;
+    QString displayVal = ui->display->text();
+    double dbDisplayVal = displayVal.toDouble();
+
+    solution = dbDisplayVal * dbDisplayVal;
+
+    ui->display->setText(QString::number(solution));
+}
+
+
+
+
 
 
 

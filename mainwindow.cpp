@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->button_square, SIGNAL(released()), this, SLOT(ToSquare()));
 
+    connect(ui->button_dot, SIGNAL(released()), this, SLOT(MakeDecimal()));
 }
 
 MainWindow::~MainWindow()
@@ -139,7 +140,14 @@ void MainWindow::ToSquare(){
     ui->display->setText(QString::number(solution));
 }
 
+void MainWindow::MakeDecimal() {
+    QString displayVal = ui->display->text();
 
+    if(!displayVal.contains(".")) {
+        displayVal += ".";
+        ui->display->setText(displayVal);
+    }
+}
 
 
 

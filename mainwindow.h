@@ -27,6 +27,7 @@ private slots:
     void ResetCalculator();
     void ChangeNumberSign();
     void ToSquare();
+    void MakeDecimal();
 
 };
 #endif // MAINWINDOW_H
